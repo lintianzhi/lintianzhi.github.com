@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Blog_Jekyll
 tags: [Blog, Jekyll]
+title: Blog_Jekyll
 ---
 
 就先暂时写成这样子的吧，基于Jekyll在GitHub上面部署的博客。Jekyll果然好用，没有那些定制博客上面杂七杂八的东西，自己要弄多简单就可以多简单。

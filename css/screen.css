@@ -20,9 +20,9 @@ div {
 	color: white;
 }
 body {
-  background-color: #666;
+  background-color: RGB(74,82,90);
   font-size: 13.34px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
   *font-size: small;
   text-align: center;
 }
@@ -45,15 +45,22 @@ a {
 
 a:link
 {
-	color:#6F0;
+    text-decoration:none;
+    border-style: none none solid;
+    border-width:0px 0px 0.5px;
+    border-color:RGB(136,136,136);
+	color:RGB(221,221,221);
+    padding: 3px 0px 1px;
 }
 
 a:hover {
-  color:#C63;
+    border-color:RGB(136,136,136);
+    color:white;
 }
 
 a:visited {
-  color: #C63;
+    border-color:RGB(136,136,136);
+    color: white;
 }
 
 table {
@@ -81,6 +88,11 @@ ul.posts {
     font-family: Monaco, "Courier New", monospace;
     font-size: 80%;
   }
+.tag_index {
+    float: right;
+}
+  .tag_index li{
+ }
 
 /*****************************************************************************/
 /*
@@ -89,7 +101,7 @@ ul.posts {
 /*****************************************************************************/
 
 .site {
-  font-size: 110%;
+  font-size: 100%;
   text-align: left;
   width: 60%;
   min-height: 80%;
@@ -106,6 +118,7 @@ ul.posts {
 .site .title a {
     color:#6FC;
     text-decoration: none;
+    border-style:none;
 }
 
   .site .title a:hover {
@@ -198,6 +211,18 @@ ul.posts {
 
   #post pre.terminal code {
     background-color: #333;
+  }
+
+.tags_of_post {
+    color: #999;
+    font-size: 90%;
+}
+  .tags_of_post ul{
+      margin-left: 5%;
+  }
+  .tags_of_post li{
+    font-size: 100%;
+    display: inline;
   }
 
 #related {

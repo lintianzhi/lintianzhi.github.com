@@ -1,0 +1,23 @@
+---
+layout: default
+title: lintianzhi
+---
+
+<div class="tags">
+    {% for tag in site.tags %}
+    <div class="tag">
+        <h2><a name="{{tag[0]}}"></a>{{ tag[0] }}</h2>
+        <ul class="posts">
+        {% for post in site.posts %}
+            {% for post_tag in post.tags %}
+                {% if post_tag == tag[0] %}
+         <li> <span>{{post.date | date_to_string}}</span> &raquo <a href="{{site.baseurl}}{{post.url}}"> {{post.title}}</a></li>
+                {% endif%}
+            {% endfor%}
+        {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+ </div>
+
+

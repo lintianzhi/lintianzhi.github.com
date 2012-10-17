@@ -17,13 +17,9 @@ title: Blog_Jekyll
 
 写东西用[Markdown](http://daringfireball.net/projects/markdown/syntax)感觉不错。
 
-本地Jekyll的tag支持
-
+之前我这样写tags
     [xxx,xxx]
-GitHub上面就要用(版本啊)
-
-    - xxx
-    - xxx
+本地正确但是上传上去文章出现乱码，然后把Markdown的引擎换成rdiscount就可以了，GitHub上面默认Maruku。
 
 要开始写博客了！
 

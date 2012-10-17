@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Blog_Jekyll
-tags: ["Blog","Jelyll"]
+tags:
+- Blog
+- Jelyll
 ---
 
 就先暂时写成这样子的吧，基于Jekyll在GitHub上面部署的博客。Jekyll果然好用，没有那些定制博客上面杂七杂八的东西，自己要弄多简单就可以多简单。
@@ -16,6 +18,14 @@ tags: ["Blog","Jelyll"]
 后来想到一个tag页面就够了，只要跳转到页面的不同地方就能实现同样的功能。然后就是这样了。
 
 写东西用[Markdown](http://daringfireball.net/projects/markdown/syntax)感觉不错。
+
+本地Jekyll的tag支持
+
+    [xxx,xxx]
+GitHub上面就要用(版本啊)
+
+    - xxx
+    - xxx
 
 要开始写博客了！
 

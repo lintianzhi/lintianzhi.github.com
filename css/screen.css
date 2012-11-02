@@ -27,13 +27,13 @@ body {
   text-align: center;
 }
 h1 {
-    font-size: 130%;
+    font-size: 150%;
 }
-h2 {
+h2, h3{
     font-size: 110%;
 }
 
-h3, h4, h5, h6 {
+ h4, h5, h6 {
   font-size: 100%;
 }
 

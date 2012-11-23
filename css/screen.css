@@ -53,16 +53,19 @@ a {
 a:link
 {
     text-decoration:none;
-    border-style: none none solid;
-    border-width:0px 0px 0.5px;
-    border-color:RGB(136,136,136);
 	color:RGB(221,221,221);
-    padding: 3px 0px 1px;
+    border-style: none none solid;
+    border-width:0px 0px 1px;
+    border-color:RGB(136,136,136);
+    padding: 3px 0px 2px;
+    background-color: inherit;
 }
 
 a:hover {
-    border-color:RGB(136,136,136);
     color:white;
+    text-decoration:none;
+    background-color:RGB(96,104,112);
+    border-color:RGB(136,136,136);
 }
 
 a:visited {
@@ -133,7 +136,7 @@ ul.posts {
 }
 
   .site .title a:hover {
-    color: #6F0;
+    color: #6FC;
   }
 
   .site .title a.extra {
@@ -143,7 +146,7 @@ ul.posts {
   }
 
   .site .title a.extra:hover {
-    color: #6F0;
+    color: #aaa;
   }
 
   .site .meta {

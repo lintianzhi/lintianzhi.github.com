@@ -1,6 +1,6 @@
 /*native theme*/
 .hll { background-color: #404040 }
-.c { color: #999999; font-style: normal } /* Comment */
+.c { color: #999999; font-style: normal; font-family:consolas,arial; } /* Comment */
 .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .g { color: #d0d0d0 } /* Generic */
 .k { color: #6ab825; font-weight: bold } /* Keyword */

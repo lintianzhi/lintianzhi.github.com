@@ -193,9 +193,13 @@ ul.posts {
   /* standard */
 
   #post pre {
+/*
     border: 1px solid #ddd;
-    background-color: #eef;
+*/
+    font-size: 80%;
+    background: none repeat scroll rgb(40,40,55);
     padding: 0 .4em;
+    line-height: 1.1em;
   }
 
   #post ul,
@@ -204,9 +208,12 @@ ul.posts {
   }
 
   #post code {
+/*  
     border: 1px solid #ddd;
     background-color: #eef;
-	color:#000 ;
+    color:#000 ;
+*/
+    background-color:transparent;
     font-size: 100%;
     padding: 0.2em;
   }

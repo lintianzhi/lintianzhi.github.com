@@ -208,17 +208,15 @@ ul.posts {
   }
 
   #post code {
-/*  
-    border: 1px solid #ddd;
-    background-color: #eef;
-    color:#000 ;
-*/
-    background-color:transparent;
-    font-size: 100%;
-    padding: 0.2em;
+    border: 0.1px solid rgb(94,102,110);
+    color:RGB(200,200,200) ;
+
+    background-color:rgb(84,92,100)
+    font-size: 95%;
   }
 
     #post pre code {
+      background-color:transparent;
       border: none;
     }
 

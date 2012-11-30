@@ -196,10 +196,10 @@ ul.posts {
 /*
     border: 1px solid #ddd;
 */
-    font-size: 80%;
+    font-size: 95%;
     background: none repeat scroll rgb(40,40,55);
     padding: 0 .4em;
-    line-height: 1.1em;
+    line-height: 1em;
   }
 
   #post ul,

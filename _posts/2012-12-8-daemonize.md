@@ -54,6 +54,9 @@ int main(int argc, char * argv[])
     return 0;
 }
 {% endhighlight %}
-PS. 要期末考试了T.T
-
+PS. 要期末考试了T.T  
+PSS. 在[v2ex][v2ex]的有人提醒下，原来  `& >/dev/null` 就可以实现了。
+我忘记`&`是后台运行的意思了。。白痴  
+PSSS. 不好一个人闭门造车啊
 [golang]: http://golang.org
+[v2ex]: http://v2ex.com

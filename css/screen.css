@@ -210,7 +210,7 @@ ul.posts {
   #post code {
     border: 1px solid rgb(94,102,110);
     color:RGB(200,200,200) ;
-
+    font-family: consolas, Arial;
     background-color:rgb(84,92,100)
     font-size: 95%;
   }

@@ -1,9 +1,4 @@
----
-title: Resume
----
 # 我只是想找一份实习T.T
-
------------------------
 
 ### 基本信息
 - 林天智，男
@@ -63,6 +58,7 @@ title: Resume
 ### 杂七杂八
 - 用Google Reader订阅一些感兴趣的博客网站看（虽然GR即将挂了还没有找好接下来换用什么服务）
 - 经常逛[Reddit.Programming](http://reddit.com/r/programming)，这是计算机大杂烩的好东西。
+- 博客界面求别喷，我很辛苦自己写的CSS`T.T`
 - 长跑爱好者
 - 喜欢猫寝室养猫
 

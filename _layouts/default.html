@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>{{page.title}}</title>
-<link href="{{site.baseurl}}/css/screen.css" rel="stylesheet" type="text/css" />
-<link href="{{site.baseurl}}/css/pygments.css" rel="stylesheet" type="text/css" />
+<link href="{{site.baseurl}}css/screen.css" rel="stylesheet" type="text/css" />
+<link href="{{site.baseurl}}css/pygments.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
 
 </script>
@@ -13,15 +13,15 @@
 <body>
     <div class="site">
         <div class="title">
-            <a href="{{site.baseurl}}/">Clavier</a>
-            <a href="{{site.baseurl}}/" class="extra">home</a>
-            <a href="{{site.baseurl}}/about.html" class="extra">about</a>
+            <a href="{{site.baseurl}}">Clavier</a>
+            <a href="{{site.baseurl}}" class="extra">home</a>
+            <a href="{{site.baseurl}}about.html" class="extra">about</a>
         </div>
         <!--
         <div class="nav">
             <ul>
-                <li><a href="{{site.baseurl}}/tags.html">TAGS</a></li>
-                <li><a href="{{site.baseurl}}/about">ABOUT</a></li>
+                <li><a href="{{site.baseurl}}tags.html">TAGS</a></li>
+                <li><a href="{{site.baseurl}}about">ABOUT</a></li>
             </ul>
         </div>
         -->
@@ -30,7 +30,7 @@
             <ul>
                 {% for tag in site.tags %}
                 <li>
-                    <a href="{{site.baseurl}}/tags.html#{{tag[0]}}">{{ tag[0] }}</a>
+                    <a href="{{site.baseurl}}tags.html#{{tag[0]}}">{{ tag[0] }}</a>
                 </li>
                 {% endfor %}
             </ul>

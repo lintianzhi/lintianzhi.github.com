@@ -7,7 +7,7 @@
 
 ### 链接什么的
 - Blog:   [MrClavier.com](http://lintianzhi.github.com)
-- Github: [http://GitHub.com/lintianzhi](http://github.com/lintianzhi)
+- Github: [http://github.com/lintianzhi](http://github.com/lintianzhi)
 
 ### 编程语言
 - `C++` 一直用这个东西，算比较熟练

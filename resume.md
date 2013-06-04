@@ -6,7 +6,7 @@
 - lintianzhi1992(AT)gmail.com
 
 ### 链接什么的
-- Blog:   [MrClavier.com](http://lintianzhi.github.com)
+- Blog:   [taixian.me](http://lintianzhi.github.com)
 - Github: [http://github.com/lintianzhi](http://github.com/lintianzhi)
 
 ### 编程语言

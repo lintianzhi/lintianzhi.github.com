@@ -1,0 +1,13 @@
+
+      <header>
+        <h1>Hi, I’m Troy.</h1>
+        <h2>I build websites.</h2>
+        <nav>
+          <ul>
+            {% for p in site.pages %}{% if p.url != page.url %}
+            <li><a href="{{ p.url }}">{% if p.url == '/' %}← {% endif %}{{ p.layout | capitalize }}</a></li>
+            {% endif %}{% endfor %}
+          </ul>
+          <div style="clear:left"></div>
+        </nav>
+      </header>

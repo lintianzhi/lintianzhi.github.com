@@ -1,46 +1,154 @@
----
-layout: default
----
-<div id="post">
-    <br/>
-    <h1>{{page.title}}</h1>
-	{{content}}
-</div>
-<div class="tags_of_post">
-    <h2>TAGS:</h2>
-    <blockquote>
-        <ul>
-            
-            {% for tag in page.tags %}
-            <li><a href="{{site.baseurl}}tags.html#{{tag}}">{{tag}}</a>&nbsp</li>
-            {% endfor %}
+<!DOCTYPE HTML>
+<html>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <title>Lin Tianzhi | {{ page.title }}</title>
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  <meta property="article:section" content="developer">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:locale" content="en_US">
+  {% if page.hero %}
+  <meta property="og:image" content="{{ site.url }}/img/{{ page.hero }}">
+  {% else %}
+  <meta property="og:image" content="{{ site.url }}/img/portrait@2x.png">
+  {% endif %}
+  <meta property="og:description" content="{{ site.excerpt }}">
+  <meta property="og:site_name" content="Troy Swanson">
+  {% include head.html %}
+  <style type="text/css">
+    /* article */
+    article {
+      padding: 1.5em 8em 4em 2em;
+      font-size: 1.2em;
+    }
+    article h1 {
+      font-size: 3.5em;
+      margin: 0;
+      text-indent: -0.05em;
+    }
+    article p {
+      line-height: 1.7em;
+    }
+    article p code {
+      font-size: 0.9em;
+      background-color: #f6f6f6;
+      border: 1px solid #eee;
+      padding: 0 0.25em;
+      margin: 0.1em;
+      border-radius: 0.3em;
+    }
+    article code {
+      font-family: "source-code-pro", monospace;
+      font-weight: 300;
+    }
+    
+    article ul.meta {
+      margin: 0 0 3em;
+      padding: 0;
+      list-style: none;
+    }
+    article ul.meta li {
+      font-size: 0.9em;
+      margin-right: 0.5em;
+      float: left;
+    }
+    article ul.meta li.pubdate { opacity: 0.5; }
+    
+    article .body { clear: left; }
+    
+    /* code highlighting */
+    .highlight {
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      padding: 0 1.25em;
+      font-size: 0.8em;
+    }
+    .highlight .c { color: #999988; font-style: italic } /* Comment */
+    .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+    .highlight .k { font-weight: bold } /* Keyword */
+    .highlight .o { font-weight: bold } /* Operator */
+    .highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+    .highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+    .highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
+    .highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+    .highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+    .highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+    .highlight .ge { font-style: italic } /* Generic.Emph */
+    .highlight .gr { color: #aa0000 } /* Generic.Error */
+    .highlight .gh { color: #999999 } /* Generic.Heading */
+    .highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+    .highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+    .highlight .go { color: #888888 } /* Generic.Output */
+    .highlight .gp { color: #555555 } /* Generic.Prompt */
+    .highlight .gs { font-weight: bold } /* Generic.Strong */
+    .highlight .gu { color: #aaaaaa } /* Generic.Subheading */
+    .highlight .gt { color: #aa0000 } /* Generic.Traceback */
+    .highlight .kc { font-weight: bold } /* Keyword.Constant */
+    .highlight .kd { font-weight: bold } /* Keyword.Declaration */
+    .highlight .kp { font-weight: bold } /* Keyword.Pseudo */
+    .highlight .kr { font-weight: bold } /* Keyword.Reserved */
+    .highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
+    .highlight .m { color: #009999 } /* Literal.Number */
+    .highlight .s { color: #d14 } /* Literal.String */
+    .highlight .na { color: #008080 } /* Name.Attribute */
+    .highlight .nb { color: #0086B3 } /* Name.Builtin */
+    .highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
+    .highlight .no { color: #008080 } /* Name.Constant */
+    .highlight .ni { color: #800080 } /* Name.Entity */
+    .highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
+    .highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
+    .highlight .nn { color: #555555 } /* Name.Namespace */
+    .highlight .nt { color: #000080 } /* Name.Tag */
+    .highlight .nv { color: #008080 } /* Name.Variable */
+    .highlight .ow { font-weight: bold } /* Operator.Word */
+    .highlight .w { color: #bbbbbb } /* Text.Whitespace */
+    .highlight .mf { color: #009999 } /* Literal.Number.Float */
+    .highlight .mh { color: #009999 } /* Literal.Number.Hex */
+    .highlight .mi { color: #009999 } /* Literal.Number.Integer */
+    .highlight .mo { color: #009999 } /* Literal.Number.Oct */
+    .highlight .sb { color: #d14 } /* Literal.String.Backtick */
+    .highlight .sc { color: #d14 } /* Literal.String.Char */
+    .highlight .sd { color: #d14 } /* Literal.String.Doc */
+    .highlight .s2 { color: #d14 } /* Literal.String.Double */
+    .highlight .se { color: #d14 } /* Literal.String.Escape */
+    .highlight .sh { color: #d14 } /* Literal.String.Heredoc */
+    .highlight .si { color: #d14 } /* Literal.String.Interpol */
+    .highlight .sx { color: #d14 } /* Literal.String.Other */
+    .highlight .sr { color: #009926 } /* Literal.String.Regex */
+    .highlight .s1 { color: #d14 } /* Literal.String.Single */
+    .highlight .ss { color: #990073 } /* Literal.String.Symbol */
+    .highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
+    .highlight .vc { color: #008080 } /* Name.Variable.Class */
+    .highlight .vg { color: #008080 } /* Name.Variable.Global */
+    .highlight .vi { color: #008080 } /* Name.Variable.Instance */
+    .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+    
+    /* responsive */
+    @media (max-width: 767px) {
+      article {
+        padding: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="pure-g-r">
+    <div class="pure-u-1-4">
+      {% include sidebar.html %}
+    </div>
+    <div class="pure-u-3-4">
+      <article vocab="http://schema.org/" typeof="BlogPosting" resource="{{ page.url }}">
+        <h1 property="name">{{ page.title }}</h1>
+        <ul class="meta">
+          <li class="pubdate"><time property="datePublished" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time></li>
+          <li class="permalink"><a property="url" href="{{ site.url }}{{ page.url }}" title="Permalink">∞</a></li>
         </ul>
-    </blockquote>
-</div>
-<div id=related>
-    <h2>Related Posts</h2>
-	<ul class="posts">
-    	{% for post in site.related_posts %}
-        	<li>
-            <span> {{ post.date | date_to_string}}&raquo;</span> <a href="{{site.baseurl}}{{post.url}}"> {{ post.title }}</a>
-            </li>
-        {% endfor %}
-    </ul>
-</div>
-<!--
-<script type='text/javascript' charset='utf-8' src='http://open.denglu.cc/connect/commentcode?appid=52566denDHw0UAUSpLGaRAmV012aPA'></script>
--->
-<div id="disqus_thread"></div>
-        <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = 'mrclavier'; // required: replace example with your forum shortname
-
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <div class="body" property="articleBody">
+          {{ content }}
+        </div>
+      </article>
+    </div>
+  </div>
+</body>
+</html>

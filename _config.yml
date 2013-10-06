@@ -1,2 +1,7 @@
-markdown: rdiscount
-pygments: true
+permalink: pretty
+
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
+
+url: http://taixian.me

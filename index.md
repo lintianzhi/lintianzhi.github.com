@@ -2,7 +2,7 @@
 
 layout: home
 
-title: Hi, I'm Lin Tianzhi.
+title: Home
 
 ---
 

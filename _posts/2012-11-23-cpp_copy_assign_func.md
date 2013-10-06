@@ -7,7 +7,8 @@ title: C++内存错误：拷贝构造函数
 暑假实习的时候写C++， 当时遇到一个C++内存的错误， 程序跑啊跑，然后跑飞了。  
 首先看下面的代码：
 意思是建一个Sheet的实例，Sheet里面包含了SubSheet，SubSheet里面又存了Sheet的地址。
-{% highlight c++ %}
+
+```c++
 #include <iostream>
 #include <cstdio>
 #include <vector>
@@ -65,7 +66,8 @@ int main()
         sheets[i].PrintAddrFromSub();
     }
 }
-{% endhighlight %}
+```
+
 这样子在Sheet类和SubSheet的类中分别输出Sheet得到这样的结果：
     Sheet Address from sheet: 0x9d5d018
     Sheet Address from sub  : 0xbf9bdc00
